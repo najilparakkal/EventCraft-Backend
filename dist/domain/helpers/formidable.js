@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.multipartFormSubmission = void 0;
+exports.multipartFormSubmission = multipartFormSubmission;
 const formidable_1 = require("formidable");
 function multipartFormSubmission(req) {
     return new Promise((resolve, reject) => {
@@ -25,4 +25,3 @@ function multipartFormSubmission(req) {
         }));
     });
 }
-exports.multipartFormSubmission = multipartFormSubmission;
