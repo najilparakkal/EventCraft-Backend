@@ -8,7 +8,7 @@ import { Users } from "../../framworks/database/models/user";
 
 const userAuth: RequestHandler = async (req, res, next) => {
   try {
-    console.log(req.cookies,"🧠🧠🧠🧠🧠🧠🧠🧠🧠🧠🧠🧠🧠🧠🧠")
+    console.log(req.cookies.jwt,"🧠🧠🧠🧠🧠🧠🧠🧠🧠🧠🧠🧠🧠🧠🧠")
     const token = req.cookies.jwt
     
     if (!token) {
