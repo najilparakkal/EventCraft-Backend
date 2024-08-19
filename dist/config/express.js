@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.configureExpress = configureExpress;
+exports.configureExpress = void 0;
 const express_1 = __importDefault(require("express"));
 const express_session_1 = __importDefault(require("express-session"));
 const cors = require("cors");
@@ -34,3 +34,4 @@ function configureExpress(app) {
     app.use(errorHandler);
     (0, database_1.connectDb)();
 }
+exports.configureExpress = configureExpress;

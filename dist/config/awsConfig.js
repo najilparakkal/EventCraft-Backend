@@ -12,8 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.uploadBufferToS3 = void 0;
-exports.uploadImage = uploadImage;
+exports.uploadBufferToS3 = exports.uploadImage = void 0;
 const user_random_name_generator_1 = require("user_random_name_generator");
 const client_s3_1 = require("@aws-sdk/client-s3");
 const fs_1 = __importDefault(require("fs"));
@@ -44,6 +43,7 @@ function uploadImage(image) {
         }
     });
 }
+exports.uploadImage = uploadImage;
 const uploadBufferToS3 = (buffer, mimeType) => __awaiter(void 0, void 0, void 0, function* () {
     const fileName = yield (0, user_random_name_generator_1.generateName)();
     const params = {
