@@ -30,7 +30,6 @@ export const refund = async (paymentId:string) => {
 export const adminAuth: RequestHandler = async (req, res, next) => {
   try {
 
-    console.log(req.cookies,req.headers)
     const token = req.headers.authorization?.split(" ")[1] as string;
     VerifyToken(token)
       .then((data) => {

@@ -34,7 +34,6 @@ export default {
 
       const name = fields?.category?.[0];
       const image = files?.image?.[0];
-
       const response = await dashboard.addCategory({ name, image });
       if (response?.success) {
         res.status(200).json({
@@ -57,7 +56,7 @@ export default {
   getCategory: async (req: Request, res: Response) => {
     try {
       const categories = await dashboard.getCategory();
-
+   
       res.status(200).json({ categories });
     } catch (error) {
       console.error("Error fetching categories:", error);
